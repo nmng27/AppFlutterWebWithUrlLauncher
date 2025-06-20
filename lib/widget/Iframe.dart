@@ -37,19 +37,15 @@ class IframeWidget extends StatelessWidget {
             ..height = '100%',
         );
 
-        final iframe = SizedBox(
-          width: MediaQuery.of(context).size.width * url.width,
-          height: MediaQuery.of(context).size.height * url.height,
-          child: HtmlElementView(viewType: viewId),
-        );
+        
 
         if (index == 0) {
           return SizedBox(
-            width: MediaQuery.of(context).size.width*0.5,
-            height: MediaQuery.of(context).size.height*1.0,
+            width: MediaQuery.of(context).size.width*1.0,
+            height: MediaQuery.of(context).size.height*0.5,
             child: HtmlElementView(viewType: viewId),
           );
-        } else if(index == 1 && index == 2){
+        } else if(index == 1 || index == 2){
           return Row(
             children: [
               SizedBox(
