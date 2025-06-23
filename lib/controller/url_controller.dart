@@ -13,6 +13,7 @@ class UrlController extends GetxController{
   List<Url> transformJson(List<Map<String, dynamic>> json) {
     return json.map((item) => Url(
       item["url"],
+      item["status"]
       
     )).toList();
   }
